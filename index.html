@@ -14,10 +14,11 @@
     Background color:
     <input ng-model="lightSquare"></br>
     Input string:
-    <input ng-model="inputStr"><button ng-click="convert()">Convert!</button></br>
+    <input ng-model="inputStr" ng-change="test()"><button ng-click="convert()">Convert!</button></br>
     Output string:</br>
     <pre>{{output}}</pre>
     <button ng-if="output" ng-click="copyToClipboard()">Copy to clipboard</button>
+    {{error}}
   </body>
 
 </html>

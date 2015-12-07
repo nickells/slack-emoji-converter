@@ -41,6 +41,15 @@ app.controller('MainCtrl', function($scope){
   $scope.convert = function(){
     $scope.output = convertToEmoji($scope.inputStr,$scope.lightSquare,$scope.darkSquare)
   }
+
+  $scope.test = function(){
+    if ($scope.inputStr.match(/[.,-\/#!$%\^&\*;:{}=\-_`~()]|[0-9]/)){
+      $scope.error = "Sorry, punctuation and numbers are not yet supported"
+    }
+    else{
+      $scope.error = ''
+    }
+  }
   
   $scope.copyToClipboard = function(){
     var copyFrom = document.createElement("textarea");
@@ -51,4 +60,6 @@ app.controller('MainCtrl', function($scope){
     document.execCommand('copy');
     body.removeChild(copyFrom);
   };
+
+  $scope.error = ''
 })
