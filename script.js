@@ -1,6 +1,7 @@
 // Code goes here
 
 function buildStringFrom(text){
+  text = ' '+ text.split('').join(' ') + ' '
   var toReturn = ''
   var textArr = text.split('')
   for (var i = 0; i<=6; i++){
