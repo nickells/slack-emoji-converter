@@ -23,11 +23,6 @@ function buildStringFrom(text){
   return toReturn;
 }
 
-var emojiTable = 
-{
-  'light': ':white_large_square:',
-  'dark': ':black_large_square:'
-}
 var convertToEmoji = function(str,light,dark){
   str = str.toLowerCase()
   str = buildStringFrom(str)
@@ -36,8 +31,8 @@ var convertToEmoji = function(str,light,dark){
 
 var app = angular.module('emojiConverter', [])
 app.controller('MainCtrl', function($scope){
-  $scope.lightSquare = ':zeke-swirl:'
-  $scope.darkSquare = ':gaby-dance:'
+  $scope.lightSquare = ':white_square:'
+  $scope.darkSquare = ':black_square:'
   $scope.convert = function(){
     test()
     $scope.output = convertToEmoji($scope.inputStr,$scope.lightSquare,$scope.darkSquare)
