@@ -25,8 +25,8 @@ function buildStringFrom(text){
 
 var emojiTable = 
 {
-  'light': ':zeke-swirl:',
-  'dark': ':gaby-dance:'
+  'light': ':white_large_square:',
+  'dark': ':black_large_square:'
 }
 var convertToEmoji = function(str,light,dark){
   str = str.toLowerCase()
