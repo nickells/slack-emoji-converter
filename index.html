@@ -15,7 +15,8 @@
     Background color:
     <input ng-model="lightSquare"></br>
     Input string:
-    <input ng-model="inputStr"><button ng-click="convert()">Convert!</button></br>
+    <input ng-model="inputStr" ng-show="preview" ng-change="convert()"><input ng-show="!preview" ng-model="inputStr"><button ng-click="convert()">Convert!</button></br>
+    Enable live preview? <input type="checkbox" ng-model="preview"></br>
     Output string:</br>
     <pre>{{output}}</pre>
     <button ng-if="output" ng-click="copyToClipboard()">Copy to clipboard</button>
