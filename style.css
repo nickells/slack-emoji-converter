@@ -1,2 +1,24 @@
 /* Styles go here */
+pre {
+  font-size: 10px;
+  cursor: pointer;
+}
+pre:hover{
+  background: white;
+}
+pre:active{
+  background: #EEE;
+}
 
+h4{
+  margin-top: 0px;
+}
+
+.btn-lg{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.page-header{
+  margin: 10px;
+}

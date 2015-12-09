@@ -1,6 +1,7 @@
 // Code goes here
 
 function buildStringFrom(text){
+  if (!text) return '';
   text = ' '+ text.split('').join(' ') + ' '
   var toReturn = ''
   var textArr = text.split('')
@@ -24,17 +25,15 @@ app.controller('MainCtrl', function($scope){
   $scope.lightSquare = ':white_square:'
   $scope.darkSquare = ':black_square:'
   $scope.convert = function(){
-    test()
+    checkInput();
     $scope.output = convertToEmoji($scope.inputStr,$scope.lightSquare,$scope.darkSquare)
     if ($scope.output.length >  4000) $scope.error = 'You are over the Slack character limit! Try using a shorter emoji name or less characters'
   }
 
-  var test = function(){
-    if ($scope.inputStr.match(/[.,-\/#!$%\^&\*;:{}=\-_`~()]|[0-9]/)){
+  var checkInput = function(){
+    $scope.error = ''
+    if ($scope.inputStr && $scope.inputStr.match(/[.,-\/#!$%\^&\*;:{}=\-_`~()]|[0-9]/)){
       $scope.error = "Sorry, punctuation and numbers are not yet supported"
-    }
-    else{
-      $scope.error = ''
     }
   }
   

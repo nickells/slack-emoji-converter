@@ -2,24 +2,48 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
     <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="alphabet.js"></script>
     <script src="script.js"></script>
   </head>
 
   <body ng-app="emojiConverter" ng-controller="MainCtrl">
-    {{test}}
-    Text color:
-    <input ng-model="darkSquare">
-    Background color:
-    <input ng-model="lightSquare"></br>
-    Input string:
-    <input ng-model="inputStr"><button ng-click="convert()">Convert!</button></br>
-    Output string:</br>
-    <pre>{{output}}</pre>
-    <button ng-if="output" ng-click="copyToClipboard()">Copy to clipboard</button>
-    {{error}}
+    <div class="container">
+      <div class="row">
+        <div class="page-header">
+          <h1>Emoji ASCII Art Converter <small>for Slack or anything really</small></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form">
+          <div class="form-group">
+          <label for="darkInput">Text Color</label>
+          <input ng-model="darkSquare" id="darkInput" class="form-control">
+          </div>
+          <div class="form-group">
+          <label for="lightInput">Background Color</label>
+          <input ng-model="lightSquare" id="lightInput" class="form-control">
+          </div>
+          <div class="form-group" class="control-label">
+          <label for="mainStr">Input String</label>
+          <input ng-model="inputStr" id="mainStr" class="form-control">
+          </div>
+          <button ng-click="convert()" class="btn btn-success btn-lg">Convert!</button>
+          <div>{{error}}</div>
+
+          </div>
+        </div>
+        <div class="col-md-8" ng-if="output">
+        <h4>Output string: (click to copy!)</h4>
+        <pre ng-click="copyToClipboard()">{{output}}</pre>
+        </div>
+
+    </div>
   </body>
 
 </html>
