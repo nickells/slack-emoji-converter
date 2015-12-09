@@ -20,4 +20,4 @@
 :cyclone::cyclone::cyclone::collision::cyclone::cyclone::cyclone::collision::cyclone::cyclone::collision::cyclone::collision::collision::collision::cyclone::collision::collision::collision::cyclone::cyclone:  
 :cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone::cyclone: 
 
-
+##[link](http://nickells.github.io/slack-emoji-converter)
