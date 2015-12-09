@@ -1,4 +1,7 @@
 /* Styles go here */
+body{
+  font-family: 'Lato', sans-serif;
+}
 pre {
   font-size: 10px;
   cursor: pointer;
