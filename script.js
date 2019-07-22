@@ -32,11 +32,11 @@ app.controller('MainCtrl', function($scope){
 
   var checkInput = function(){
     $scope.error = ''
-    if ($scope.inputStr && $scope.inputStr.match(/[.,-\/#!$%\^&\*;:{}=\-_`~()]|[0-9]/)){
-      $scope.error = "Sorry, punctuation and numbers are not yet supported"
+    if ($scope.inputStr && $scope.inputStr.match(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/)){
+      $scope.error = "Sorry, punctuation is not yet supported"
     }
   }
-  
+
   $scope.copyToClipboard = function(){
     var copyFrom = document.createElement("textarea");
     copyFrom.textContent = $scope.output
