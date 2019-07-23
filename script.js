@@ -25,18 +25,11 @@ app.controller('MainCtrl', function($scope){
   $scope.lightSquare = ':white_square:'
   $scope.darkSquare = ':black_square:'
   $scope.convert = function(){
-    checkInput();
+    $scope.error = ''
     $scope.output = convertToEmoji($scope.inputStr,$scope.lightSquare,$scope.darkSquare)
     if ($scope.output.length >  4000) $scope.error = 'You are over the Slack character limit! Try using a shorter emoji name or less characters'
   }
 
-  var checkInput = function(){
-    $scope.error = ''
-    if ($scope.inputStr && $scope.inputStr.match(/[.,-\/#!$%\^&\*;:{}=\-_`~()]|[0-9]/)){
-      $scope.error = "Sorry, punctuation and numbers are not yet supported"
-    }
-  }
-  
   $scope.copyToClipboard = function(){
     var copyFrom = document.createElement("textarea");
     copyFrom.textContent = $scope.output
