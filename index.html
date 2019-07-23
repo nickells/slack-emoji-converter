@@ -22,7 +22,7 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <div class="form">
+          <form class="form">
           <div class="form-group">
           <label for="darkInput">Text Color</label>
           <input ng-model="darkSquare" id="darkInput" class="form-control">
@@ -37,8 +37,7 @@
           </div>
           <button ng-click="convert()" class="btn btn-success btn-lg">Convert!</button>
           <div>{{error}}</div>
-
-          </div>
+          </form>
         </div>
         <div class="col-md-8" ng-if="output">
         <h4>Output string: (click to copy!)</h4>
